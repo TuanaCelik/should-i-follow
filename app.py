@@ -11,12 +11,15 @@ from utils.ui import reset_results, set_initial_state
 
 set_initial_state()
 
-st.write("# What have they been tweeting about lately?")
+st.write("# 🐤 What have they been tweeting about lately?")
 
+search_bar, button = st.columns(2)
 # Search bar
-username = st.text_input("", value=st.session_state.username, max_chars=100, on_change=reset_results)
+with search_bar: 
+    username = st.text_input("", value=st.session_state.username, on_change=reset_results, label_visibility="collapsed")
 
-run_pressed = st.button("Run")
+with button: 
+    run_pressed = st.button("Seach tweets")
 
 run_query = (
     run_pressed or username != st.session_state.username

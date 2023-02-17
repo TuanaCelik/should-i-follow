@@ -1,5 +1,5 @@
 farm-haystack==1.13.0
-streamlit==1.10.0
+streamlit==1.18.0
 markdown
 st-annotated-text
 python-dotenv
