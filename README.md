@@ -1,4 +1,4 @@
-# Temaplate Streamlit App for Haystack Search Pipelines
+# Simple app to get an overview of what the twitter user has been posting about and their tone
 
 In this repo you will find a template streamlit app set up for search applications.
 
