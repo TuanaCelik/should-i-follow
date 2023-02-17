@@ -14,25 +14,23 @@ def start_haystack():
                                                                     You may go into some detail about what topics they tend to like tweeting about. Please also mention their overall tone, for example: positive,
                                                                     negative, political, sarcastic or something else.
                                                                     
-                                                                    Example: 
+                                                                    Use  the following format: 
                                                                     
                                                                     Twitter stream: Many people in our community asked how to utilize LLMs in their NLP pipelines and how to modify prompts for their tasks.…
                                                                     RT @deepset_ai: We use parts of news articles from The Guardian as documents and create custom prompt templates to categorize these article
                                                                     
-                                                                    Voice: This person has lately been tweeting about NLP and LLMs. Their tweets have been in Enlish
-                                                                    
-                                                                    Example: 
+                                                                    Summary: This person has lately been tweeting about NLP and LLMs. Their tweets have been in Enlish
                                                                     
                                                                     Twitter stream: I've directed my team to set sharper rules on how we deal with unidentified objects.\n\nWe will inventory, improve ca… 
                                                                     the incursion by China’s high-altitude balloon, we enhanced radar to pick up slower objects.\n \nBy doing so, w…
                                                                     I gave an update on the United States’ response to recent aerial objects. 
 
-                                                                    Voice: This person has lately been tweeting about an unidentified object and an incursion by China with a high-altitude baloon.
+                                                                    Summary: This person has lately been tweeting about an unidentified object and an incursion by China with a high-altitude baloon.
                                                                     They have been tweeting about the USA. They have had a political tone. They mostly post in English.
 
-                                                                    Twitter stream: $tweets.
+                                                                    Twitter stream: $tweets 
                                                                     
-                                                                    Voice:
+                                                                    Summary:
                                                                     """)
     return prompt_node, twitter_template
 
@@ -50,8 +48,9 @@ def query(username):
         response = requests.request("GET", url, headers = headers)
         twitter_stream = ""
         for tweet in response.json():
-            twitter_stream += (tweet["text"])
-        result = prompter.prompt(prompt_template=template, tweets=twitter_stream[0:4097])
-    except:
+            twitter_stream += tweet["text"]
+        result = prompter.prompt(prompt_template=template, tweets=twitter_stream[0:10000])
+    except Exception as e:
+        print(e)
         result = ["Please make sure you are providing a correct, public twitter accout"]
     return result
