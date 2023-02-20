@@ -10,11 +10,11 @@ def start_haystack():
     #Use this function to contruct a pipeline
     prompt_node = PromptNode(model_name_or_path="text-davinci-003", api_key=OEPN_AI_KEY)
 
-    twitter_template = PromptTemplate(name="twitter-voice", prompt_text="""You will be given a twitter stream belonging to a specific profile. Tell us what they've lately been tweeting about and in what languages.
+    twitter_template = PromptTemplate(name="twitter-voice", prompt_text="""You will be given a twitter stream belonging to a specific profile. Answer with a summary of what they've lately been tweeting about and in what languages.
                                                                     You may go into some detail about what topics they tend to like tweeting about. Please also mention their overall tone, for example: positive,
                                                                     negative, political, sarcastic or something else.
-                                                                    
-                                                                    Use  the following format: 
+
+                                                                    Examples: 
                                                                     
                                                                     Twitter stream: Many people in our community asked how to utilize LLMs in their NLP pipelines and how to modify prompts for their tasks.…
                                                                     RT @deepset_ai: We use parts of news articles from The Guardian as documents and create custom prompt templates to categorize these article
@@ -30,7 +30,7 @@ def start_haystack():
 
                                                                     Twitter stream: $tweets 
                                                                     
-                                                                    Summary:
+                                                                    Summary: 
                                                                     """)
     return prompt_node, twitter_template
 
@@ -43,13 +43,13 @@ def query(username):
 
     headers = {"Authorization": "Bearer {}".format(bearer_token)}
 
-    url = f"https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name={username}&count={100}"
+    url = f"https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name={username}&count={60}"
     try:
         response = requests.request("GET", url, headers = headers)
         twitter_stream = ""
         for tweet in response.json():
             twitter_stream += tweet["text"]
-        result = prompter.prompt(prompt_template=template, tweets=twitter_stream[0:10000])
+        result = prompter.prompt(prompt_template=template, tweets=twitter_stream)
     except Exception as e:
         print(e)
         result = ["Please make sure you are providing a correct, public twitter accout"]
