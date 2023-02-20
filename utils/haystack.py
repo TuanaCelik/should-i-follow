@@ -16,18 +16,28 @@ def start_haystack():
 
                                                                     Examples: 
                                                                     
-                                                                    Twitter stream: Many people in our community asked how to utilize LLMs in their NLP pipelines and how to modify prompts for their tasks.…
-                                                                    RT @deepset_ai: We use parts of news articles from The Guardian as documents and create custom prompt templates to categorize these article
+                                                                    Twitter stream: RT @deepset_ai: Come join our Haystack server for our first Discord event tomorrow, a deepset AMA session with @rusic_milos @malte_pietsch…
+                                                                    RT @deepset_ai: Join us for a chat! On Thursday 25th we are hosting a 'deepset - Ask Me Anything' session on our brand new Discord. Come…
+                                                                    RT @deepset_ai: Curious about how you can use @OpenAI GPT3 in a Haystack pipeline? This week we released Haystack 1.7 with which we introdu…
+                                                                    RT @tuanacelik: So many updates from @deepset_ai today! 
                                                                     
-                                                                    Summary: This person has lately been tweeting about NLP and LLMs. Their tweets have been in Enlish
+                                                                    Summary: This user has lately been retweeting tweets fomr @deepset_ai. The topics of the tweets have been around the Haystack community, NLP and GPT. They've
+                                                                    been posting in English, and have had a positive, informative tone.
                                                                     
                                                                     Twitter stream: I've directed my team to set sharper rules on how we deal with unidentified objects.\n\nWe will inventory, improve ca… 
                                                                     the incursion by China’s high-altitude balloon, we enhanced radar to pick up slower objects.\n \nBy doing so, w…
                                                                     I gave an update on the United States’ response to recent aerial objects. 
 
-                                                                    Summary: This person has lately been tweeting about an unidentified object and an incursion by China with a high-altitude baloon.
-                                                                    They have been tweeting about the USA. They have had a political tone. They mostly post in English.
+                                                                    Summary: This user has lately been tweeting about having sharper rules to deal with unidentified objects and an incursuin by China's high-altitude
+                                                                    baloon. Their tweets have mostly been neutral but determined in tone. They mostly post in English.
+                                                                    
+                                                                    Twitter stream: here are some stats from Invisible Women -- lots more where that came from https://t.co/STCkyD1spwstay at home mums are not economically inactive,
+                                                                    YOUR CHANCE TO COMMENT ON A NEW BRITISH STANDARD FOR MENSTRUAL AND MENOPAUSAL HEALTH IN THE WORKPLACE
+                                                                    very attacked by South Dakota rn. @CCriadoPerez: The Invisible Women newsletter is BACK. Populist drivel for the modern woman. Also! Alzheimer’s and HRT. And POPPY. Enjoy…..
 
+                                                                    Summary: This user has lately been posting about the womens rights, menstrual and menopausal helpth and The Invisible Women newsletter. They've mostly been posting in English
+                                                                    and have a positive and informative tone.
+                                                                    
                                                                     Twitter stream: $tweets 
                                                                     
                                                                     Summary: 

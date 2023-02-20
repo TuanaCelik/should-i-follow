@@ -9,4 +9,4 @@ def set_initial_state():
     set_state_if_absent("result", None)
 
 def reset_results(*args):
-    st.session_state.results = None
+    st.session_state.result = None

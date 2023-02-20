@@ -16,10 +16,12 @@ st.write("# 🐤 What have they been tweeting about lately?")
 search_bar, button = st.columns(2)
 # Search bar
 with search_bar: 
-    username = st.text_input("", value=st.session_state.username, on_change=reset_results, label_visibility="collapsed")
+    username = st.text_input("Please provide a twitter username", on_change=reset_results)
 
 with button: 
-    run_pressed = st.button("Seach tweets")
+    st.write("")
+    st.write("")
+    run_pressed = st.button("Search tweets")
 
 run_query = (
     run_pressed or username != st.session_state.username
