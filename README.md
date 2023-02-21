@@ -1,4 +1,6 @@
-# Simple app to get an overview of what the twitter user has been posting about and their tone
+# Should I Follow?
+
+##### A simple app to get an overview of what the twitter user has been posting about and their tone
 
 This is a demo just for fun 🥳
 This repo contains a streamlit application that given a Twitter username, tells you what type of things they've been posting about lately, their tone, and the languages they use. It uses the LLM by OpenAI `text-davinci-003`.
