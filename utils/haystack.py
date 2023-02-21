@@ -30,14 +30,7 @@ def start_haystack():
 
                                                                     Summary: This user has lately been tweeting about having sharper rules to deal with unidentified objects and an incursuin by China's high-altitude
                                                                     baloon. Their tweets have mostly been neutral but determined in tone. They mostly post in English.
-                                                                    
-                                                                    Twitter stream: here are some stats from Invisible Women -- lots more where that came from https://t.co/STCkyD1spwstay at home mums are not economically inactive,
-                                                                    YOUR CHANCE TO COMMENT ON A NEW BRITISH STANDARD FOR MENSTRUAL AND MENOPAUSAL HEALTH IN THE WORKPLACE
-                                                                    very attacked by South Dakota rn. @CCriadoPerez: The Invisible Women newsletter is BACK. Populist drivel for the modern woman. Also! Alzheimer’s and HRT. And POPPY. Enjoy…..
 
-                                                                    Summary: This user has lately been posting about the womens rights, menstrual and menopausal helpth and The Invisible Women newsletter. They've mostly been posting in English
-                                                                    and have a positive and informative tone.
-                                                                    
                                                                     Twitter stream: $tweets 
                                                                     
                                                                     Summary: 
