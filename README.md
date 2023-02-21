@@ -1,6 +1,22 @@
 # Simple app to get an overview of what the twitter user has been posting about and their tone
 
-In this repo you will find a template streamlit app set up for search applications.
+This is a demo just for fun 🥳
+This repo contains a streamlit application that given a Twitter username, tells you what type of things they've been posting about lately, their tone, and the languages they use. It uses the LLM by OpenAI `text-davinci-003`.
+
+It's been built with [Haystack](https://haystack.deepset.ai) using the [`PromptNode`](https://docs.haystack.deepset.ai/docs/prompt_node) and by creating a custom [`PromptTemplate`](https://docs.haystack.deepset.ai/docs/prompt_node#templates)
+
+https://user-images.githubusercontent.com/15802862/220464834-f42c038d-54b4-4d5e-8d59-30d95143b616.mov
+
+
+### Points of improvement
+
+Since we're using a generative model here, we need to be a bit creative with the prompt we provide it to minimize any hallucination or similar unwanted results. For this reason, I've tried to be a bit creative with the `PromptTemplate` and give some examples of _how_ to construct a summary. However, this still sometimes produces odd results.
+
+If you try to run it yourself and find ways to make this app better, please feel free to create an issue/PR 🙌
+
+## To learn more about the PromptNode
+
+Check out our tutorial on the PromptNode and how to create your own templates [here](https://haystack.deepset.ai/tutorials/21_customizing_promptnode)
 
 ## Installation and Running
 To run the bare application which does _nothing_:
@@ -13,5 +29,4 @@ To run the bare application which does _nothing_:
 
 This will start up the app on `localhost:8501` where you will dind a simple search bar
 
-## What to edit:
-
+#### The Haystack Community is on [Discord](https://discord.com/invite/VBpFzsgRVF)
