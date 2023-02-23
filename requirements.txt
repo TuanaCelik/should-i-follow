@@ -1,5 +1,5 @@
 git+https://github.com/deepset-ai/haystack.git@openai/token_limit#egg=farm-haystack
-streamlit==1.18.0
+streamlit==1.17.0
 markdown
 st-annotated-text
 python-dotenv

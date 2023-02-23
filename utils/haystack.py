@@ -5,7 +5,9 @@ from utils.config import TWITTER_BEARER, OEPN_AI_KEY
 from haystack.nodes import PromptNode, PromptTemplate
 
 # cached to make index and models load only at start
-@st.cache_resource
+@st.cache(
+    hash_funcs={"builtins.SwigPyObject": lambda _: None}, allow_output_mutation=True
+)
 def start_haystack():
     #Use this function to contruct a pipeline
     prompt_node = PromptNode(model_name_or_path="text-davinci-003", api_key=OEPN_AI_KEY)
@@ -39,7 +41,7 @@ def start_haystack():
 
 prompter, template = start_haystack()
 
-@st.cache_data(show_spinner=False)
+@st.cache(show_spinner=False, allow_output_mutation=True)
 def query(username):
 
     bearer_token = TWITTER_BEARER
