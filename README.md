@@ -1,3 +1,15 @@
+---
+title: Should I follow?
+emoji: 🦄
+colorFrom: pink
+colorTo: yellow
+sdk: streamlit
+sdk_version: 1.18.0
+app_file: app.py
+pinned: false
+---
+
+
 # Should I Follow?
 
 ##### A simple app to get an overview of what the twitter user has been posting about and their tone
