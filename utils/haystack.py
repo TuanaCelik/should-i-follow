@@ -57,5 +57,5 @@ def query(username):
         result = prompter.prompt(prompt_template=template, tweets=twitter_stream)
     except Exception as e:
         print(e)
-        result = ["Please make sure you are providing a correct, public twitter accout"]
+        result = ["Please make sure you are providing a correct, public twitter account"]
     return result
