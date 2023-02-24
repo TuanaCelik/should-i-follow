@@ -1,4 +1,5 @@
 import streamlit as st
+from PIL import Image
 
 def set_state_if_absent(key, value):
     if key not in st.session_state:
@@ -17,10 +18,13 @@ def set_openai_api_key(api_key: str):
 
 def sidebar():
     with st.sidebar:
+        image = Image.open('logo/haystack-logo-colored.png')
+        st.image(image, width=250)
+
         st.markdown(
             "## How to use\n"
-            "1. Enter your [OpenAI API key](https://platform.openai.com/account/api-keys) below🔑\n"
-            "2. Enter a twitter username in the searchbar\n"
+            "1. Enter your [OpenAI API key](https://platform.openai.com/account/api-keys) below\n"
+            "2. Enter a Twitter username in the searchbar\n"
             "3. Enjoy 🤗\n"
         )
         api_key_input = st.text_input(
@@ -36,11 +40,10 @@ def sidebar():
 
         st.markdown("---")
         st.markdown("### About\n"
-                    "This app is just for fun and there are many points of improvement."
-                    "It was built with [Haystack](https://haystack.deepset.ai) using the"
-                    " [PromptNode](https://docs.haystack.deepset.ai/docs/prompt_node) and custom [PromptTemplate](https://docs.haystack.deepset.ai/docs/prompt_node#templates)"
-                    "The source code is also on [GitHub](https://github.com/TuanaCelik/should-i-follow)"
-                    "with instructions to run locally.")
+                    "This app was built with [Haystack](https://haystack.deepset.ai) using the"
+                    " [PromptNode](https://docs.haystack.deepset.ai/docs/prompt_node) and custom [PromptTemplate](https://docs.haystack.deepset.ai/docs/prompt_node#templates)."
+                    " The source code is also on [GitHub](https://github.com/TuanaCelik/should-i-follow)"
+                    " with instructions to run locally.")
         st.markdown("Made by [tuanacelik](https://twitter.com/tuanacelik)")
         st.markdown("---")
         st.markdown("""Thanks to [mmz_001](https://twitter.com/mm_sasmitha) 
