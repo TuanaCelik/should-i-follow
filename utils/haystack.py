@@ -1,16 +1,15 @@
 import streamlit as st
 import requests
-from utils.config import TWITTER_BEARER, OPEN_AI_KEY
+from utils.config import TWITTER_BEARER
 
 from haystack.nodes import PromptNode, PromptTemplate
 
 # cached to make index and models load only at start
-@st.cache(
-    hash_funcs={"builtins.SwigPyObject": lambda _: None}, allow_output_mutation=True
-)
-def start_haystack():
+@st.cache(hash_funcs={"builtins.CoreBPE": lambda _: None}, show_spinner=False, allow_output_mutation=True)
+def start_haystack(openai_key):
     #Use this function to contruct a pipeline
-    prompt_node = PromptNode(model_name_or_path="text-davinci-003", api_key=OPEN_AI_KEY)
+    prompt_node = PromptNode(model_name_or_path="text-davinci-003", api_key=openai_key)
+
 
     twitter_template = PromptTemplate(name="twitter-voice", prompt_text="""You will be given a twitter stream belonging to a specific profile. Answer with a summary of what they've lately been tweeting about and in what languages.
                                                                     You may go into some detail about what topics they tend to like tweeting about. Please also mention their overall tone, for example: positive,
@@ -37,12 +36,13 @@ def start_haystack():
                                                                     
                                                                     Summary: 
                                                                     """)
+
+    st.session_state["haystack_started"] = True                                                     
     return prompt_node, twitter_template
 
-prompter, template = start_haystack()
 
-@st.cache(show_spinner=False, allow_output_mutation=True)
-def query(username):
+@st.cache(hash_funcs={"builtins.CoreBPE": lambda _: None}, show_spinner=False, allow_output_mutation=True)
+def query(username, prompter, template):
 
     bearer_token = TWITTER_BEARER
 
