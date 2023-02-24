@@ -7,16 +7,15 @@ import requests
 
 import streamlit as st
 
-from utils.haystack import start_haystack, query
+from utils.haystack import query, start_haystack
 from utils.ui import reset_results, set_initial_state, sidebar
 from utils.config import TWITTER_BEARER
 
 set_initial_state()
 
-st.write("# 🐤 What have they been tweeting about lately?")
-
 sidebar()
 
+st.write("# 🐤 What have they been tweeting about lately?")
 
 if st.session_state.get("OPENAI_API_KEY"):
     prompter, template = start_haystack(st.session_state.get("OPENAI_API_KEY"))

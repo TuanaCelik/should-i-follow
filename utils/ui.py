@@ -19,7 +19,11 @@ def set_openai_api_key(api_key: str):
 def sidebar():
     with st.sidebar:
         image = Image.open('logo/haystack-logo-colored.png')
-        st.image(image, width=250)
+        st.markdown("Thanks for coming to this 🤗 Spcae.\n\n"
+        "This is a project for fun, and is not a final product."
+        "There's a lot that can be improved to make this app better.\n\n"
+        "**Take results with a grain of** 🧂\n\n"
+        "For more on how this was built, instructions to run locally and to contribute: [visit GitHub](https://github.com/TuanaCelik/should-i-follow#readme)")
 
         st.markdown(
             "## How to use\n"
@@ -27,6 +31,7 @@ def sidebar():
             "2. Enter a Twitter username in the searchbar\n"
             "3. Enjoy 🤗\n"
         )
+
         api_key_input = st.text_input(
             "OpenAI API Key",
             type="password",
@@ -39,12 +44,16 @@ def sidebar():
             set_openai_api_key(api_key_input)
 
         st.markdown("---")
-        st.markdown("### About\n"
-                    "This app was built with [Haystack](https://haystack.deepset.ai) using the"
-                    " [PromptNode](https://docs.haystack.deepset.ai/docs/prompt_node) and custom [PromptTemplate](https://docs.haystack.deepset.ai/docs/prompt_node#templates)."
-                    " The source code is also on [GitHub](https://github.com/TuanaCelik/should-i-follow)"
-                    " with instructions to run locally.")
+        st.markdown(
+            "## How this works\n"
+            "This app was built with [Haystack](https://haystack.deepset.ai) using the"
+            " [`PromptNode`](https://docs.haystack.deepset.ai/docs/prompt_node) and custom [`PromptTemplate`](https://docs.haystack.deepset.ai/docs/prompt_node#templates).\n\n"
+            " The source code is also on [GitHub](https://github.com/TuanaCelik/should-i-follow)"
+            " with instructions to run locally.\n"
+            "You can see how the `PromptNode` was set up [here](https://github.com/TuanaCelik/should-i-follow/blob/main/utils/haystack.py)")
+        st.markdown("---")
         st.markdown("Made by [tuanacelik](https://twitter.com/tuanacelik)")
         st.markdown("---")
         st.markdown("""Thanks to [mmz_001](https://twitter.com/mm_sasmitha) 
                         for open sourcing [KnowledgeGPT](https://knowledgegpt.streamlit.app/) which helped me with this sidebar 🙏🏽""")
+        st.image(image, width=250)
