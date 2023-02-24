@@ -7,15 +7,11 @@ from markdown import markdown
 import streamlit as st
 
 from utils.haystack import query
-from utils.ui import reset_results, set_initial_state
+from utils.ui import reset_results, set_initial_state, sidebar
 
 set_initial_state()
 
-st.markdown("Thanks for coming to this 🤗 Spcae.\n **A few words of warning**:\n\n"
-        "This is very much a project for fun, and is not a final product."
-        "There's a lot that can be improved to make this app better...\n\n"
-        "**Please take results with a grain of** 🧂\n\n"
-        "For more on how this was built, instructions to run locally and to contribute: [visit GitHub](https://github.com/TuanaCelik/should-i-follow#readme)")
+sidebar()
 
 st.write("# 🐤 What have they been tweeting about lately?")
 
