@@ -15,9 +15,9 @@ def reset_results(*args):
 def sidebar():
     with st.sidebar:
         image = Image.open('logo/haystack-logo-colored.png')
-        st.markdown("Thanks for coming to this 🤗 Spcae.\n\n"
+        st.markdown("Thanks for coming to this 🤗 Space.\n\n"
         "This is a project for fun, and is not a final product."
-        "There's a lot that can be improved to make this app better.\n\n"
+        " There's a lot that can be improved to make this app better.\n\n"
         "**Take results with a grain of** 🧂\n\n"
         "For more on how this was built, instructions to run locally and to contribute: [visit GitHub](https://github.com/TuanaCelik/should-i-follow#readme)")
 

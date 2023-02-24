@@ -1,6 +1,6 @@
 import streamlit as st
 import requests
-from utils.config import TWITTER_BEARER, OEPN_AI_KEY
+from utils.config import TWITTER_BEARER, OPEN_AI_KEY
 
 from haystack.nodes import PromptNode, PromptTemplate
 
@@ -10,7 +10,7 @@ from haystack.nodes import PromptNode, PromptTemplate
 )
 def start_haystack():
     #Use this function to contruct a pipeline
-    prompt_node = PromptNode(model_name_or_path="text-davinci-003", api_key=OEPN_AI_KEY)
+    prompt_node = PromptNode(model_name_or_path="text-davinci-003", api_key=OPEN_AI_KEY)
 
     twitter_template = PromptTemplate(name="twitter-voice", prompt_text="""You will be given a twitter stream belonging to a specific profile. Answer with a summary of what they've lately been tweeting about and in what languages.
                                                                     You may go into some detail about what topics they tend to like tweeting about. Please also mention their overall tone, for example: positive,
