@@ -31,6 +31,7 @@ if st.session_state.get("OPENAI_API_KEY"):
         run_pressed = st.button("Search tweets")
 else:
     st.write("Please provide your OpenAI Key to start using the application")
+    st.write("If you are using a smaller screen, open the sidebar from the top left to provide your OpenAI Key 🙌")
     
 if st.session_state.get("api_key_configured"):
     run_query = (
