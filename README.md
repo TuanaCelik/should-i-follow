@@ -12,6 +12,8 @@ pinned: false
 
 # Should I Follow?
 
+### Try it out on [🤗 Spaces](https://huggingface.co/spaces/deepset/should-i-follow)
+
 ##### A simple app to get an overview of what the twitter user has been posting about and their tone
 
 This is a demo just for fun 🥳
@@ -38,8 +40,8 @@ To run the bare application which does _nothing_:
 `pip install -r requirements.txt`
 2. Run the streamlit app:
 `streamlit run app.py`
-3. Createa a `.env` and add your Twitter Bearer and OpenAI tokens:
-`TWITTER_BEARER_TOKEN` and `OPEN_AI_KEY`
+3. Createa a `.env` and add your Twitter Bearer token:
+`TWITTER_BEARER_TOKEN` 
 
 This will start up the app on `localhost:8501` where you will dind a simple search bar
 
