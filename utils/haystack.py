@@ -39,7 +39,7 @@ def start_haystack(openai_key):
     return prompt_node, twitter_template
 
 
-@st.cache_data
+@st.cache_data(show_spinner=True)
 def query(username, _prompter, _template):
     headers = {"Authorization": "Bearer {}".format(TWITTER_BEARER)}
     print(username)
