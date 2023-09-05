@@ -14,10 +14,10 @@ pinned: false
 
 ### Try it out on [🤗 Spaces](https://huggingface.co/spaces/deepset/should-i-follow)
 
-##### A simple app to get an overview of what the twitter user has been posting about and their tone
+##### A simple app to get an overview of what the Mastodon user has been posting about and their tone
 
 This is a demo just for fun 🥳
-This repo contains a streamlit application that given a Twitter username, tells you what type of things they've been posting about lately, their tone, and the languages they use. It uses the LLM by OpenAI `text-davinci-003`.
+This repo contains a streamlit application that given a Mastodon username, tells you what type of things they've been posting about lately, their tone, and the languages they use. It uses the LLM by OpenAI `text-davinci-003`.
 
 It's been built with [Haystack](https://haystack.deepset.ai) using the [`PromptNode`](https://docs.haystack.deepset.ai/docs/prompt_node) and by creating a custom [`PromptTemplate`](https://docs.haystack.deepset.ai/docs/prompt_node#templates)
 
@@ -40,8 +40,6 @@ To run the bare application which does _nothing_:
 `pip install -r requirements.txt`
 2. Run the streamlit app:
 `streamlit run app.py`
-3. Createa a `.env` and add your Twitter Bearer token:
-`TWITTER_BEARER_TOKEN` 
 
 This will start up the app on `localhost:8501` where you will dind a simple search bar
 

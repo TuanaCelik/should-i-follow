@@ -1,5 +1,7 @@
-farm-haystack==1.18.1
+safetensors==0.3.3.post1
+farm-haystack==1.20.0
 streamlit==1.21.0
 markdown
 st-annotated-text
 python-dotenv
+mastodon-fetcher-haystack

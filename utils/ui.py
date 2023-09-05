@@ -6,7 +6,7 @@ def set_state_if_absent(key, value):
         st.session_state[key] = value
 
 def set_initial_state():
-    set_state_if_absent("username", "Provide a Twitter username")
+    set_state_if_absent("username", "Provide a Mastodon username (e.g. xyz@mastodon.social)")
     set_state_if_absent("result", None)
     set_state_if_absent("haystack_started", False)
 
@@ -28,7 +28,7 @@ def sidebar():
         st.markdown(
             "## How to use\n"
             "1. Enter your [OpenAI API key](https://platform.openai.com/account/api-keys) below\n"
-            "2. Enter a Twitter username in the searchbar\n"
+            "2. Enter a Mastodon username in the searchbar\n"
             "3. Enjoy 🤗\n"
         )
 
