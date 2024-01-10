@@ -50,7 +50,7 @@ def sidebar():
             " [`OpenAIGenerator`](https://docs.haystack.deepset.ai/v2.0/docs/openaigenerator) and [`PromptBuilder`](https://docs.haystack.deepset.ai/v2.0/docs/promptbuilder).\n\n"
             " The source code is also on [GitHub](https://github.com/TuanaCelik/should-i-follow)"
             " with instructions to run locally.\n"
-            "You can see how the `PromptNode` was set up [here](https://github.com/TuanaCelik/should-i-follow/blob/main/utils/haystack.py)")
+            "You can see how the `PromptBuilder` was set up [here](https://github.com/TuanaCelik/should-i-follow/blob/main/utils/haystack.py)")
         st.markdown("---")
         st.markdown("Made by [tuanacelik](https://twitter.com/tuanacelik)")
         st.markdown("---")
