@@ -46,8 +46,8 @@ def sidebar():
         st.markdown("---")
         st.markdown(
             "## How this works\n"
-            "This app was built with [Haystack](https://haystack.deepset.ai) using the"
-            " [`PromptNode`](https://docs.haystack.deepset.ai/docs/prompt_node) and custom [`PromptTemplate`](https://docs.haystack.deepset.ai/docs/prompt_node#templates).\n\n"
+            "This app was built with [Haystack 2.0-Beta](https://haystack.deepset.ai) using the"
+            " [`OpenAIGenerator`](https://docs.haystack.deepset.ai/v2.0/docs/openaigenerator) and [`PromptBuilder`](https://docs.haystack.deepset.ai/v2.0/docs/promptbuilder).\n\n"
             " The source code is also on [GitHub](https://github.com/TuanaCelik/should-i-follow)"
             " with instructions to run locally.\n"
             "You can see how the `PromptNode` was set up [here](https://github.com/TuanaCelik/should-i-follow/blob/main/utils/haystack.py)")

@@ -54,5 +54,5 @@ if st.session_state.get("api_key_configured"):
                 
     if st.session_state.result:
         voice = st.session_state.result
-        st.write(voice['results'][0])
+        st.write(voice[0])
             

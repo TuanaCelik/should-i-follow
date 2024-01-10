@@ -17,22 +17,22 @@ pinned: false
 ##### A simple app to get an overview of what the Mastodon user has been posting about and their tone
 
 This is a demo just for fun 🥳
-This repo contains a streamlit application that given a Mastodon username, tells you what type of things they've been posting about lately, their tone, and the languages they use. It uses the LLM by OpenAI `text-davinci-003`.
+This repo contains a streamlit application that given a Mastodon username, tells you what type of things they've been posting about lately, their tone, and the languages they use. It uses the LLM by OpenAI `gpt-4`.
 
-It's been built with [Haystack](https://haystack.deepset.ai) using the [`PromptNode`](https://docs.haystack.deepset.ai/docs/prompt_node) and by creating a custom [`PromptTemplate`](https://docs.haystack.deepset.ai/docs/prompt_node#templates)
+It's been built with [Haystack](https://haystack.deepset.ai) using the [`OpenAIGenerator`](https://docs.haystack.deepset.ai/v2.0/docs/openaigenerator) and by creating a [`PromptBuilder`](https://docs.haystack.deepset.ai/v2.0/docs/promptbuilder)
 
 https://user-images.githubusercontent.com/15802862/220464834-f42c038d-54b4-4d5e-8d59-30d95143b616.mov
 
 
 ### Points of improvement
 
-Since we're using a generative model here, we need to be a bit creative with the prompt we provide it to minimize any hallucination or similar unwanted results. For this reason, I've tried to be a bit creative with the `PromptTemplate` and give some examples of _how_ to construct a summary. However, this still sometimes produces odd results.
+Since we're using a generative model here, we need to be a bit creative with the prompt we provide it to minimize any hallucination or similar unwanted results. For this reason, I've tried to be a bit creative with the `PromptBuilder` template and give some examples of _how_ to construct a summary. However, this still sometimes produces odd results.
 
 If you try to run it yourself and find ways to make this app better, please feel free to create an issue/PR 🙌
 
-## To learn more about the PromptNode
+## To learn more about the PromptBuilder
 
-Check out our tutorial on the PromptNode and how to create your own templates [here](https://haystack.deepset.ai/tutorials/21_customizing_promptnode)
+As of Haystack 2.0-Beta onwards, you can create prompt templates with Jinja. Check out guide on creating prompts [here](https://docs.haystack.deepset.ai/v2.0/docs/promptbuilder)
 
 ## Installation and Running
 To run the bare application which does _nothing_:
