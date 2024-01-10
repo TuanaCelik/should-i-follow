@@ -4,4 +4,4 @@ streamlit==1.21.0
 markdown
 st-annotated-text
 python-dotenv
-mastodon-fetcher-haystack
+mastodon-fetcher-haystack==0.0.1
