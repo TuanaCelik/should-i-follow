@@ -1,4 +1,4 @@
-haystack-ai==2.0.0b4
+haystack-ai==2.26.0
 streamlit==1.21.0
 markdown
 st-annotated-text
