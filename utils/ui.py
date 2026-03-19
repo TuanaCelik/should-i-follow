@@ -6,7 +6,7 @@ def set_state_if_absent(key, value):
         st.session_state[key] = value
 
 def set_initial_state():
-    set_state_if_absent("username", "Provide a Mastodon username (e.g. xyz@mastodon.social)")
+    set_state_if_absent("username", "taylorswifteras.bsky.social")
     set_state_if_absent("result", None)
     set_state_if_absent("haystack_started", False)
 
@@ -28,7 +28,7 @@ def sidebar():
         st.markdown(
             "## How to use\n"
             "1. Enter your [OpenAI API key](https://platform.openai.com/account/api-keys) below\n"
-            "2. Enter a Mastodon username in the searchbar\n"
+            "2. Enter a Bluesky handle in the searchbar\n"
             "3. Enjoy 🤗\n"
         )
 
@@ -46,11 +46,11 @@ def sidebar():
         st.markdown("---")
         st.markdown(
             "## How this works\n"
-            "This app was built with [Haystack 2.0-Beta](https://haystack.deepset.ai) using the"
-            " [`OpenAIGenerator`](https://docs.haystack.deepset.ai/v2.0/docs/openaigenerator) and [`PromptBuilder`](https://docs.haystack.deepset.ai/v2.0/docs/promptbuilder).\n\n"
+            "This app was built with [Haystack](https://haystack.deepset.ai) using the"
+            " [`OpenAIChatGenerator`](https://docs.haystack.deepset.ai/docs/openaichatgenerator) and [`ChatPromptBuilder`](https://docs.haystack.deepset.ai/docs/chatpromptbuilder).\n\n"
             " The source code is also on [GitHub](https://github.com/TuanaCelik/should-i-follow)"
             " with instructions to run locally.\n"
-            "You can see how the `PromptBuilder` was set up [here](https://github.com/TuanaCelik/should-i-follow/blob/main/utils/haystack.py)")
+            "You can see how the `ChatPromptBuilder` was set up [here](https://github.com/TuanaCelik/should-i-follow/blob/main/utils/haystack.py)")
         st.markdown("---")
         st.markdown("Made by [tuanacelik](https://twitter.com/tuanacelik)")
         st.markdown("---")
