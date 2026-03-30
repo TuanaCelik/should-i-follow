@@ -1,6 +1,3 @@
-haystack-ai==2.0.0b4
-streamlit==1.21.0
-markdown
-st-annotated-text
+haystack-ai==2.26.0
+streamlit==1.55.0
 python-dotenv
-mastodon-fetcher-haystack

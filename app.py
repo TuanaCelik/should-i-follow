@@ -1,9 +1,6 @@
 
-from annotated_text import annotation
 from json import JSONDecodeError
 import logging
-from markdown import markdown
-import requests
 
 import streamlit as st
 
@@ -14,7 +11,7 @@ set_initial_state()
 
 sidebar()
 
-st.write("# 🐤 What have they been posting about lately on Mastodon?")
+st.write("# 🦋 What have they been posting about lately on Bluesky?")
 
 if st.session_state.get("OPENAI_API_KEY"):
     pipeline = start_haystack(st.session_state.get("OPENAI_API_KEY"))
@@ -22,12 +19,12 @@ if st.session_state.get("OPENAI_API_KEY"):
     search_bar, button = st.columns(2)
     # Search bar
     with search_bar: 
-        username = st.text_input("Please provide a Mastodon username", on_change=reset_results)
+        username = st.text_input("Please provide a Bluesky handle", value=st.session_state.username, on_change=reset_results)
 
     with button: 
         st.write("")
         st.write("")
-        run_pressed = st.button("Search posts (toots)")
+        run_pressed = st.button("Search posts")
 else:
     st.write("Please provide your OpenAI Key to start using the application")
     st.write("If you are using a smaller screen, open the sidebar from the top left to provide your OpenAI Key 🙌")
@@ -53,6 +50,5 @@ if st.session_state.get("api_key_configured"):
                 st.error("🐞 &nbsp;&nbsp; An error occurred during the request.")            
                 
     if st.session_state.result:
-        voice = st.session_state.result
-        st.write(voice[0])
+        st.write(st.session_state.result)
             
